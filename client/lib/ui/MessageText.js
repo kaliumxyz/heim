@@ -93,7 +93,7 @@ export default React.createClass({
       html = autolinker.link(html)
     }
 
-    html = html.replace(/\b[a-z][a-zA-Z.,:;!?]+\b/g, "chicken").replace(/\b[A-Z][a-zA-Z.,:;!?]+\b/g, "Chicken")
+    html = html.replace(/\b[a-z][a-zA-Z]+\b/g, "chicken").replace(/\b[A-Z][a-zA-Z]+\b/g, "Chicken")
 
     return (
       <span className={this.props.className} style={this.props.style} title={this.props.title} dangerouslySetInnerHTML={{
